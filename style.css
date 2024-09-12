@@ -113,6 +113,37 @@ body {
     color: #666;
 }
 
+/* News Section Styles */
+.news-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.news-section h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.news-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.news-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px 0;
+}
+
 /* Footer Styles */
 .footer {
     background-color: #333;
