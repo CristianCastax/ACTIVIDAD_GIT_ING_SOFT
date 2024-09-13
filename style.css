@@ -6,9 +6,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     color: #333;
 }
 
@@ -17,6 +17,11 @@ body {
     background-color: #333;
     color: #fff;
     padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
@@ -29,19 +34,20 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #fff;
+    color: #f4b400;
 }
 
 .nav-links {
     list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
     display: inline-block;
-    margin-left: 20px;
 }
 
 .nav-links a {
@@ -57,91 +63,123 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-    /*background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;/*/
-    background-color: #fff;
+    background: url('https://www.techdaily.com/wp-content/uploads/2024/08/AI_innovation.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
+    color: #fff;
     text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
-
+    letter-spacing: 2px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
 }
 
 .cta-btn {
     display: inline-block;
     background-color: #f4b400;
     color: #333;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-btn:hover {
     background-color: #333;
     color: #fff;
+    transform: scale(1.05);
 }
 
 /* Main Content Styles */
 .main-content {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
     background-color: #fff;
 }
 
 .main-content h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .main-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* News Section Styles */
 .news-section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     background-color: #fff;
     color: #333;
     text-align: center;
+    margin: 40px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .news-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
 }
 
 .news-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 20px 0;
 }
 
 .news-section p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #666;
     margin-bottom: 20px;
+    line-height: 1.8;
 }
 
 .news-image {
     width: 100%;
     max-width: 800px;
     height: auto;
-    margin: 20px 0;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific section styles */
+.blockchain-section {
+    background-color: #e0f7fa;
+}
+
+.ai-section {
+    background-color: #e8f5e9;
 }
 
 /* Footer Styles */
@@ -150,8 +188,47 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer p {
     margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+    }
+
+    .main-content h2,
+    .news-section h2 {
+        font-size: 2rem;
+    }
+
+    .main-content p,
+    .news-section p {
+        font-size: 1rem;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
 }
